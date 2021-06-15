@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { Typography } from 'react-typography'
+import { Typography } from 'react-typography';
 
 const App = () => {
-  return <Typography text='Create React Library Example 😄' />
-}
+  return (
+    <Typography name='LargeTitle' text='Create React Library Example 😄' />
+  );
+};
 
-export default App
+export default App;
