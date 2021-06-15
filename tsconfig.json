@@ -17,6 +17,6 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": ["src", "prettier.config.js"],
   "exclude": ["node_modules", "dist", "example"]
 }
