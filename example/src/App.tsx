@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-typography'
-import 'react-typography/dist/index.css'
+import { Typography } from 'react-typography'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Typography text='Create React Library Example 😄' />
 }
 
 export default App
