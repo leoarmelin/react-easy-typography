@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { handleStyle } from './typography';
 
 export interface TypographyProps {
-  text: string;
+  children?: React.ReactNode;
   type?:
     | 'LargeTitle'
     | 'TitleOne'
@@ -26,7 +26,7 @@ const handleType = (typeName: string) => {
 };
 
 export const Typography = ({
-  text,
+  children,
   type = 'Body',
   guideline = 'Google',
   className = '',
@@ -40,7 +40,7 @@ export const Typography = ({
 
   return (
     <Text guideline={guideline} className={className}>
-      {text}
+      {children}
     </Text>
   );
 };
