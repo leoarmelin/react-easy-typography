@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { handleStyle } from './typography';
 
 export interface TypographyProps {
   text: string;
-  name?:
+  type?:
     | 'LargeTitle'
     | 'TitleOne'
     | 'TitleTwo'
@@ -12,6 +13,8 @@ export interface TypographyProps {
     | 'Body'
     | 'Caption'
     | 'Footer';
+  guideline?: 'Apple' | 'Google';
+  className?: string;
 }
 
 const handleType = (typeName: string) => {
@@ -24,11 +27,20 @@ const handleType = (typeName: string) => {
 
 export const Typography = ({
   text,
-  name = 'Body',
+  type = 'Body',
+  guideline = 'Google',
+  className = '',
 }: TypographyProps): JSX.Element => {
-  const tagName = handleType(name);
+  const tagName = handleType(type);
+  const styleName = handleStyle(type);
 
-  const Text = styled(tagName)``;
+  const Text = styled(tagName)`
+    ${styleName}
+  `;
 
-  return <Text>{text}</Text>;
+  return (
+    <Text guideline={guideline} className={className}>
+      {text}
+    </Text>
+  );
 };
