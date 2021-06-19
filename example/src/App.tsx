@@ -1,28 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Typography } from 'react-typography';
 
-const App = () => {
-  return (
-    <>
-      <Typography type='LargeTitle' guideline='Google' text='LargeTitle' />
-      <Typography type='TitleOne' guideline='Google' text='TitleOne' />
-      <Typography type='TitleTwo' guideline='Google' text='TitleTwo' />
-      <Typography type='TitleThree' guideline='Google' text='TitleThree' />
-      <Typography type='Headline' guideline='Google' text='Headline' />
-      <Typography type='Body' guideline='Google' text='Body' />
-      <Typography type='Caption' guideline='Google' text='Caption' />
-      <Typography type='Footer' guideline='Google' text='Footer' />
+import { Container, ExamplesContainer, Button } from './styles/App';
+import GlobalStyle from './styles/global';
 
-      <Typography type='LargeTitle' guideline='Apple' text='LargeTitle' />
-      <Typography type='TitleOne' guideline='Apple' text='TitleOne' />
-      <Typography type='TitleTwo' guideline='Apple' text='TitleTwo' />
-      <Typography type='TitleThree' guideline='Apple' text='TitleThree' />
-      <Typography type='Headline' guideline='Apple' text='Headline' />
-      <Typography type='Body' guideline='Apple' text='Body' />
-      <Typography type='Caption' guideline='Apple' text='Caption' />
-      <Typography type='Footer' guideline='Apple' text='Footer' />
-    </>
+import { screenToggler, ScreensList } from './utils/screenToggler';
+
+const App = () => {
+  const [screen, toggleScreen] = useState<keyof ScreensList | undefined>(
+    undefined,
+  );
+  return (
+    <Container>
+      <GlobalStyle />
+      <Typography type='TitleOne' className='title'>
+        Welcome to react-typography!
+      </Typography>
+      <Typography type='TitleThree'>
+        Choose one of the examples to run:
+      </Typography>
+
+      <ExamplesContainer>
+        <Button onClick={() => toggleScreen('classnameScreen')}>
+          <Typography>Change css with classname</Typography>
+        </Button>
+        <Button onClick={() => toggleScreen('styledScreen')}>
+          <Typography>Change css with styled components</Typography>
+        </Button>
+      </ExamplesContainer>
+
+      {screen && screenToggler(screen)}
+    </Container>
   );
 };
 
