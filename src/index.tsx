@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { handleStyle } from './typography';
+import { Text } from './typography';
 
 export interface TypographyProps {
   children?: React.ReactNode;
@@ -32,15 +32,12 @@ export const Typography = ({
   className = '',
 }: TypographyProps): JSX.Element => {
   const tagName = handleType(type);
-  const styleName = handleStyle(type);
-
-  const Text = styled(tagName)`
-    ${styleName}
-  `;
 
   return (
-    <Text guideline={guideline} className={className}>
+    <Text as={tagName} type={type} guideline={guideline} className={className}>
       {children}
     </Text>
   );
 };
+
+export const TypographyStyle = styled(Typography)``;

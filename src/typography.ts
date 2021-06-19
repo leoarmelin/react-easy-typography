@@ -1,10 +1,12 @@
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
-interface IGuideline {
+interface IText {
+  as: string;
+  type: string;
   guideline: 'Apple' | 'Google';
 }
 
-const LargeTitle = css<IGuideline>`
+const LargeTitle = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -20,7 +22,7 @@ const LargeTitle = css<IGuideline>`
         `}
 `;
 
-const TitleOne = css<IGuideline>`
+const TitleOne = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -33,7 +35,7 @@ const TitleOne = css<IGuideline>`
         `}
 `;
 
-const TitleTwo = css<IGuideline>`
+const TitleTwo = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -49,7 +51,7 @@ const TitleTwo = css<IGuideline>`
         `}
 `;
 
-const TitleThree = css<IGuideline>`
+const TitleThree = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -61,7 +63,7 @@ const TitleThree = css<IGuideline>`
         `}
 `;
 
-const Headline = css<IGuideline>`
+const Headline = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -76,7 +78,7 @@ const Headline = css<IGuideline>`
         `}
 `;
 
-const Body = css<IGuideline>`
+const Body = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -90,7 +92,7 @@ const Body = css<IGuideline>`
         `}
 `;
 
-const Caption = css<IGuideline>`
+const Caption = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -104,7 +106,7 @@ const Caption = css<IGuideline>`
         `}
 `;
 
-const Footer = css<IGuideline>`
+const Footer = css<IText>`
   ${props =>
     props.guideline === 'Google'
       ? css`
@@ -118,7 +120,7 @@ const Footer = css<IGuideline>`
         `}
 `;
 
-export const handleStyle = (styleName: string) => {
+const handleStyle = (styleName: string) => {
   if (styleName === 'LargeTitle') return LargeTitle;
   if (styleName === 'TitleOne') return TitleOne;
   if (styleName === 'TitleTwo') return TitleTwo;
@@ -128,3 +130,7 @@ export const handleStyle = (styleName: string) => {
   if (styleName === 'Footer') return Footer;
   return Body;
 };
+
+export const Text = styled.h1<IText>`
+  ${props => handleStyle(props.type)}
+`;
