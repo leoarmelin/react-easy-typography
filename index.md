@@ -1,3 +1,10 @@
+---
+layout: default
+title: Home
+nav_order: 1
+permalink: /
+---
+
 # Documentation
 
 You can use the [editor on GitHub](https://github.com/leoarmelin/react-typography/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
