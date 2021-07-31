@@ -17,13 +17,15 @@ export interface TypographyProps {
   className?: string;
 }
 
-const handleType = (typeName: string) => {
-  if (typeName === 'LargeTitle' || typeName === 'TitleOne') return 'h1';
-  if (typeName === 'TitleTwo') return 'h2';
-  if (typeName === 'TitleThree') return 'h3';
-  if (typeName === 'Headline') return 'b';
-  return 'p';
+const jsonHandlerType = {
+  LargeTitle: 'h1',
+  TitleOne: 'h1',
+  TitleTwo: 'h2',
+  TitleThree: 'h3',
+  HeadLine: 'b',
 };
+
+const handleType = (typeName: string) => jsonHandlerType[typeName] || 'p';
 
 export const Typography = ({
   children,

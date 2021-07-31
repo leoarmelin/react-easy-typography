@@ -120,16 +120,17 @@ const Footer = css<IText>`
         `}
 `;
 
-const handleStyle = (styleName: string) => {
-  if (styleName === 'LargeTitle') return LargeTitle;
-  if (styleName === 'TitleOne') return TitleOne;
-  if (styleName === 'TitleTwo') return TitleTwo;
-  if (styleName === 'TitleThree') return TitleThree;
-  if (styleName === 'Headline') return Headline;
-  if (styleName === 'Caption') return Caption;
-  if (styleName === 'Footer') return Footer;
-  return Body;
+const jsonHandlerStyle = {
+  LargeTitle: LargeTitle,
+  TitleOne: TitleOne,
+  TitleTwo: TitleTwo,
+  TitleThree: TitleThree,
+  Headline: Headline,
+  Caption: Caption,
+  Footer: Footer,
 };
+
+const handleStyle = (styleName: string) => jsonHandlerStyle[styleName] || Body;
 
 export const Text = styled.h1<IText>`
   ${props => handleStyle(props.type)}
