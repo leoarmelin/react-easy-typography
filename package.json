@@ -4,7 +4,7 @@
   "description": "An easy-to-use lib to create typography components with styled-components",
   "author": "leoarmelin",
   "license": "MIT",
-  "repository": "leoarmelin/react-typography",
+  "repository": "leoarmelin/react-easy-typography",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",

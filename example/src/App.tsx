@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Typography } from 'react-typography';
+import { Typography } from 'react-easy-typography';
 
 import { Container, ExamplesContainer, Button } from './styles/App';
 import GlobalStyle from './styles/global';
@@ -15,7 +15,7 @@ const App = () => {
     <Container>
       <GlobalStyle />
       <Typography type='TitleOne' className='title'>
-        Welcome to react-typography!
+        Welcome to react-easy-typography!
       </Typography>
       <Typography type='TitleThree'>
         Choose one of the examples to run:

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography } from 'react-typography';
+import { Typography } from 'react-easy-typography';
 
 import { Container } from '../styles/Classname';
 

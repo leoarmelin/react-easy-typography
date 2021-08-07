@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { TypographyStyle } from 'react-typography';
+import { TypographyStyle } from 'react-easy-typography';
 
 export const Caption = styled(TypographyStyle)``;
 
