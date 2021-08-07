@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-easy-typography.svg)](https://www.npmjs.com/package/react-easy-typography) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-[Documentation](https://leoarmelin.github.io/react-easy-typography/)
+[Demo](https://react-easy-typography.netlify.app/) | [Documentation](https://leoarmelin.github.io/react-easy-typography/)
 
 ## Status: development
 
