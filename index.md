@@ -11,8 +11,8 @@ A pioneer tool based on styled components which allows you to build standarized 
 
 We use Apple's and Google's based styles, following the most recent guidelines. **One tag, many benefits**.
 
-Our [GitHub page](https://github.com/leoarmelin/react-typography).
+Our [GitHub page](https://github.com/leoarmelin/react-easy-typography).
 
 ### Contact
 
-Having trouble with react-typography? Help you and other with issues [here](https://github.com/leoarmelin/react-typography/issues)
+Having trouble with react-typography? Help you and other with issues [here](https://github.com/leoarmelin/react-easy-typography/issues)
