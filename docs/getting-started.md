@@ -6,4 +6,30 @@ nav_order: 4
 
 # Getting started
 
-Hello, world!
+Now it's time to create your first typography component! Firstly, create any react component, in order to contain our component.
+
+```JSX
+export const App = () => {
+  return (
+    <div>
+      <p>Hello, World!</p>
+    </div>
+  )
+}
+```
+
+The next step is to import our library and replace the `<p>` tag with the `<Typography>` tag.
+
+```JSX
+import { Typography } from 'react-easy-typography';
+
+export const App = () => {
+  return (
+    <div>
+      <Typography>Hello, World!</Typography>
+    </div>
+  )
+}
+```
+
+Softer than chewing water, right?
