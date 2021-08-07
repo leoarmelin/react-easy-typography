@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Styling
+title: Using props
 nav_order: 5
 ---
 
