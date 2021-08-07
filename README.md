@@ -1,8 +1,10 @@
-# react-typography
+# react-easy-typography
 
 > Made with create-react-library
 
-[![NPM](https://img.shields.io/npm/v/react-typography.svg)](https://www.npmjs.com/package/react-typography) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-easy-typography.svg)](https://www.npmjs.com/package/react-easy-typography) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+[Documentation](https://leoarmelin.github.io/react-easy-typography/)
 
 ## Status: development
 
@@ -10,7 +12,7 @@
 
 To setup and run a local copy:
 
-- Clone this repo with `git clone https://github.com/leoarmelin/react-typography.git`
+- Clone this repo with `git clone https://github.com/leoarmelin/react-easy-typography.git`
 - Run yarn or npm install in the root folder
 - Run yarn or npm install in the example folder
 - In seperate terminal windows, run yarn start in the root and example folders.
@@ -22,7 +24,7 @@ You should now be up and running with live browser reloading of the example webs
 ```tsx
 import React from 'react';
 
-import { Typography } from 'react-typography';
+import { Typography } from 'react-easy-typography';
 
 const MyComponent = () => {
   return <Typography type='Headline'>No more worries about texts</Typography>;
