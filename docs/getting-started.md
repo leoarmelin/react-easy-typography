@@ -8,7 +8,7 @@ nav_order: 4
 
 Now it's time to create your first typography component! Firstly, create any react component, in order to contain our component.
 
-```js
+```
 export const App = () => {
   return (
     <div>
@@ -20,7 +20,7 @@ export const App = () => {
 
 The next step is to import our library and replace the `<p>` tag with the `<Typography>` tag.
 
-```js
+```
 import { Typography } from 'react-easy-typography';
 
 export const App = () => {
