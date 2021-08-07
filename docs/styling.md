@@ -1,12 +1,10 @@
 ---
 layout: default
 title: Styling
-nav_order: 5
+nav_order: 6
 ---
 
 # Styling
-
-Currently, react-easy-typography is following two guidelines: **Google** and **Apple**.
 
 In the future, we want to give our users the opportunity to create their own typography systems easisy. Right now, if you want to style Google's or Apple's guidelines, you have two ways: using styled-components or className. Let's see!
 
@@ -43,6 +41,8 @@ export const Greetings = () => {
 Contrary to the styled-somponents one, let's start creating the component itself, but using a `className` prop.
 
 ```
+import { Typography } from 'react-easy-typography';
+
 export const Greetings = () => {
   return (
     <Container>
