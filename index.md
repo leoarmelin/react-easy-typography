@@ -15,4 +15,4 @@ Our [GitHub page](https://github.com/leoarmelin/react-easy-typography).
 
 ### Contact
 
-Having trouble with react-typography? Help you and other with issues [here](https://github.com/leoarmelin/react-easy-typography/issues)
+Having trouble with react-easy-typography? Help you and other with issues [here](https://github.com/leoarmelin/react-easy-typography/issues)
